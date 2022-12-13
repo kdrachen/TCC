@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    scroll-behavior: smooth;
+}
+
+/* Propriedades do Header */
+
+header {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    background-color: white;
+    /* box-shadow: 0 3px 5px white; */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+/* Iniciando o flex no Header */
+
+.div-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+/* Logo da Neura Clean */
+
+.div-img-neura > p {
+    cursor: default;
+}
+
+.neura-clean {
+    margin-top: 10px;
+    color: white;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.div-img-neura, .div-nav {
+    margin-left: 4.125rem;
+}
+
+.div-img-neura {
+    display: flex;
+    align-items: center;
+
+
+}
+
+/* Barra de navegação */
+
+.div-nav {
+    margin-right: 4.125rem;
+}
+
+/* Elementos de navegação (a) */
+
+.nav-item,
+.cliqueaqui {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 0.4rem;
+    transition-duration: 1s;
+}
+
+/* Efeito passar mouse em cima do elemento (a) */
+
+.nav-item:hover {
+    transition-duration: 0.2s;
+    color: #3ed14c;
+}
+
+/* ------------------------ */
+
+/* Onda */
+
+.waves {
+    position: relative;
+    bottom: -9px;
+    left:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wave-trás {
+    animation: moveWave-trás 5s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave-trás {
+    from{
+        transform: scalex(1.5) ; 
+        translateX: 100px;
+    }
+}
+
+.wave-meio{
+    animation: moveWave-meio 3s  ease-in-out infinite alternate;
+}
+
+@keyframes moveWave-meio {
+    from {
+        transform: scalex(1.5);
+    }
+ }
+
+.wave-frente{
+ animation: moveWave-frente 5s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave-frente {
+    from{
+        transform: scalex(1.5);
+        translateX: 1500px;
+    }
+ }
+
+/* ------------------------ */
+
+/* CORPO */
+
+.corpo {
+    margin-top: 106px;
+}
+
+.corpo p {
+    font-size: 20px;
+    padding: 15px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.image-bg > p {
+    font-size: 25px !important;
+}
+
+.corpo h1 {
+    font-size: 40px;
+}
+
+/* Contextualização */
+
+.image-bg {
+    color: black;
+    /* background-image: url('Fundo\ super\ hiper\ mega\ atualizado\ certo.png'); */
+    background-color: rgb(0, 110, 55); /* rgb(0, 110, 55) */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-bg .e {
+    width: 80%;
+    color: white;
+    font-size: 22px;
+    padding: 100px 0 0 0px;
+}
+
+.image-bg h1 {
+    font-size: 50px;
+    color: white;
+    left: 34%;
+    text-align: center;
+}
+
+.titulo-animacao h1{
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+}
+
+.titulo-animacao h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+.titulo-animacao h1:nth-child(2){
+    color: #0bf403;
+    animation: animate 4s ease-in-out infinite;
+}
+    
+@keyframes animate {
+    0%,100%{
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50%
+    {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+/* ------------------------ */
+
+/* EQUIPE CARD */
+
+#equipe-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#equipe-card h1 {
+    font-size: 15px;
+    padding: 10px 0 10px 0;
+    width: 100%;
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #3ed14c;
+    margin: 15px;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    width: 30vh;
+    transition-duration: 1.5s;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 30%;
+}
+
+.fotoequipe {
+    width: 101%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.card-4:hover {
+    width: 33vh;
+    transition-duration: 0.5s;
+}
+
+.linha-horizontal {
+    width: 100%;
+    border: 1px solid #3ed14c;
+}
+
+.ne {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* ------------------------ */
+
+/* MISSÃO, VISÃO e VALORES */
+
+.missao-visao-valores {
+    margin-top: 50px;
+    display: flex;
+    background-color: #f6f6f6;
+    overflow: hidden;
+}
+
+.ideais-img {
+    width: 20vh;
+}
+ 
+.ideais p {
+    font-size: 20px;
+    width: 80%
+} 
+
+.missao, .visao, .valores {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* ------------------------ */
+
+/* Justificando textos */
+
+#alimentacao p, #sono p, #exercicio p, #habitos p {
+    text-align: justify;
+}
+
+/* Alimentação */
+
+#alimentacao {
+    padding: 0 100px 50px 100px;
+}
+
+.alimentacao-fundo-image {
+    background-image: url('./Sem\ Título-3.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 200px 0 200px 50px;
+    border-radius: 15px;
+}
+
+.texto-transparente-al {
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.142);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 15px 0px black;
+    -moz-box-shadow: 0px 0px 15px 0px black;
+    box-shadow: 0px 0px 15px 0px black;
+}
+
+/* ------------------------ */
+
+/* SONO */
+
+#sono {
+    padding: 0 100px 0 100px;
+}
+
+.bg-img-sono {
+    background-image: url('./young-beautiful-woman-lying-on-bed-early-in-morning.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    padding: 200px 0 200px 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+#getIdeaisImg {
+    cursor: pointer;   
+}
+
+.texto-transparente-sono {
+    width: 50%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    margin-left: 45%;
+    background-color: rgba(255, 255, 255, 0.142);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 15px 0px black;
+    -moz-box-shadow: 0px 0px 15px 0px black;
+    box-shadow: 0px 0px 15px 0px black;
+}
+
+/* ------------------------ */
+
+/* Exercício */
+
+#exercicio {
+    padding: 0 100px 50px 100px;
+}
+
+.exercicio-fundo-image {
+    background-image: url('./Foto\ fundo\ exercício\ físico.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 200px 0 200px 50px;
+    border-radius: 15px;
+}
+
+.texto-transparente {
+    width: 50%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.142);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 15px 0px black;
+    -moz-box-shadow: 0px 0px 15px 0px black;
+    box-shadow: 0px 0px 15px 0px black;
+}
+
+.imagem-academia {
+    width: 50%;
+}
+
+/* ------------------------ */
+
+/* HABITOS */
+
+#habitos {
+    padding: 0 100px 50px 100px;
+}
+
+.habitos-fundo-image {
+    background-image: url('./side-view-woman-meditating-in-nature.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 200px 0 200px 50px;
+    border-radius: 15px;
+}
+
+.texto-transparente-habitos {
+    width: 50%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.142);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 15px 0px black;
+    -moz-box-shadow: 0px 0px 15px 0px black;
+    box-shadow: 0px 0px 15px 0px black;
+    margin-left: 45%;
+}
+
+/* BTN PROPS */
+
+.btn {
+    background: transparent;
+    margin: 15px 0 0 0;
+    padding: 12px;
+    transition-duration: 0.5s;
+    border-radius: 35px;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+.btn:hover {
+    transition-duration: 0.5s;
+    color: #3ed14c;
+    border: 2px solid #3ed14c;
+    font-weight: bold;
+}
+
+/* ---------------------- */
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    width: 100%;
+}
+
+footer h1 {
+    text-align: center;
+    color: #3ed14c;
+    font-weight: bold;
+}
+
+.footer-imagens {
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+.footer-neura p {
+    font-size: 22px;
+    text-align: justify;
+}
+
+.container-footer {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-neura, .footer-dicas {
+    width: 100%;
+}
+
+.footer-compra {
+    text-align: center;
+    width: 50%;
+}
+
+.footer-compra {
+    padding: 0 50px 0 50px;
+}
+
+.footer-dicas-imagens {
+    width: 10%;
+}
+
+.footer-contato {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-email {
+    padding: 0 50px;
+}
+
+.footer-card {
+    width: 100%;
+    padding: 30px;
+    transition-duration: 0.2s;
+}
+
+.footer-local {
+   padding: 33.5px; 
+}
+
+.footer-telefone {
+    padding: 51px;
+}
+
+.footer-card:hover {
+    background-color: rgba(255, 255, 255, 0.359);
+    transition-duration: 0.2s;
+}
+
+.footer-btn {
+    width: 80%;
+    color: white;
+    border: 1px solid white;
+}
+
+.footer-btn:hover {
+    color: #3ed14c;
+    border: 1px solid #3ed14c;
+}
+
+/* MEDIA QUERY */
+
+@media(max-width: 768px) {
+
+    /* MEDIA QUERY CONTEXT */
+
+    .image-bg h1 {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .image-bg .e {
+        width: 100%;
+        font-size: 20px;
+        padding: 0;
+    }
+
+    /* MEDIA QUERY IDEAIS */
+
+    .ideais {
+        width: 100%;
+    }
+
+    .missao-visao-valores {
+        align-items: center;
+        width: 100%;
+        flex-direction: column;  
+    }
+
+    .visao {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .ideais p {
+        width: 100%;
+    }
+
+    /* MEDIA QUERY CARDS */
+    
+    .ne {
+        font-size: 40px;    
+    }
+
+    .cards h1 {
+        font-size: 40px;
+    }
+
+    .cards .nome-equipe {
+        align-items: center;
+        margin-top: 0;
+    }
+    
+    .nome-equipe {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #equipe-card {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cards {
+        margin-bottom: 10px;
+    }
+
+    .image-bg .e {
+        width: 80%;
+        color: white;
+        font-size: 18px;
+        padding: 100px 0 0 0px;
+    }
+    
+    .image-bg h1 {
+        font-size: 40px;
+        color: white;
+        left: 0%;
+    }
+
+    /* MEDIA QUERY ALIMENTAÇÃO / SONO / EXERCÍCIOS / HÁBITOS */
+
+    /* ALIMENTAÇÃO */
+
+    .alimentacao-fundo-image {
+        margin-top: 50px;
+        background-size: 100% 100%;
+        padding: 50px 0 50px 0;
+    }
+
+    .texto-transparente-al {
+        width: 78%;
+        padding: 20px;
+        margin: 0 0 0 40px;
+    }
+
+    .texto-transparente-al p {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .texto-transparente-al h1 {
+        font-size: 25px;
+    }
+
+    .btn {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+    }
+
+    /* SONO */
+
+    .bg-img-sono {
+        background-size: 100% 100%;
+        padding: 50px 0 50px 0;
+    }
+
+    .texto-transparente-sono {
+        width: 78%;
+        padding: 20px;
+        margin: 0 0 0 40px;
+    }
+
+    .texto-transparente-sono p {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .texto-transparente-sono h1 {
+        font-size: 25px;
+    }
+
+    /* EXERCÍCIO */
+
+    .exercicio-fundo-image {
+        background-size: 100% 100%;
+        padding: 50px 0 50px 0;
+    }
+
+    .texto-transparente {
+        width: 78%;
+        padding: 20px;
+        margin: 0 0 0 40px;
+    }
+
+    .texto-transparente p {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .texto-transparente h1 {
+        font-size: 25px;
+    }
+
+    /* HÁBITOS */
+
+    .habitos-fundo-image {
+        background-size: 100% 100%;
+        padding: 50px 0 50px 0;
+    }
+
+    .texto-transparente-habitos {
+        width: 78%;
+        padding: 20px;
+        margin: 0 0 0 40px;
+    }
+
+    .texto-transparente-habitos p {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .texto-transparente-habitos h1 {
+        font-size: 25px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        width: 100%;
+    }
+    
+    .container-footer {
+        width: 90%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer-neura, .footer-compra, .footer-dicas {
+        padding: 30px;
+    }
+
+    .footer-neura {
+        padding-bottom: 20px    ;
+    }
+
+    .footer-compra {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-dicas {
+        padding-top: 20px;
+    }
+
+    .footer-btn {
+        width: 40%;
+    }
+
+    .footer-contato {
+        margin: 20px 0 0 0;
+        padding-bottom: 50px;
+    }
+
+    .footer-contato, .footer-contato p, .footer-contato h1 {
+        font-size: 18px;
+    }
+
+    .footer-card {
+        width: 80%;
+        padding: 0px;
+    }
+
+    .footer-email {
+        padding: 0 30px 0 30px;
+    }
+
+    .footer-dicas-imagens {
+        width: 10%;
+    }
+}
+
+/* ---------------------- */
+
+/* MENU Hamburger */
+
+.hamburger {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 5;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.show-menu .hamburger {
+    right: 16rem;
+}
+
+.line {
+    width: 100%;
+    height: 4%;
+    padding: 1px;
+    border-radius: 10px;
+    background-color: black;
+    transition: transform .4s;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(.4rem, .9rem);
+    background-color: rgb(224, 49, 102);
+    box-shadow: none;
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.3rem, -.9rem);
+    background-color: red;
+    box-shadow: none;
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background: #f6f6f6;
+    box-shadow: 10px 5px 15px 10px rgba(0, 0, 0, 0.582);
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all .4s;
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    margin-bottom: .5rem;
+    list-style: none;
+}
+
+.menu-link {
+    font-family:sans-serif;
+    font-size: 2rem;
+    color: #000;
+    transition: color .7s;
+}
+
+.menu-link:hover {
+    color: #3ed14c;
+    transition: color .7s;
+}
+
+/* Responsivo Hamburger */
+
+@media (min-width:768px) {
+    .container {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .div-nav {
+        display: none;
+    }
+}
