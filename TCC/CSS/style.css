@@ -211,7 +211,7 @@ header {
 }
 
 #equipe-card h1 {
-    font-size: 15px;
+    font-size: 24px;
     padding: 10px 0 10px 0;
     width: 100%;
 }
@@ -519,6 +519,14 @@ footer h1 {
     transition-duration: 0.2s;
 }
 
+.footer-qrcode, .footer-dicas-imagens {
+    width: 3rem;
+}
+
+.footer-icons {
+    width: 2rem;
+}
+
 .footer-btn {
     width: 80%;
     color: white;
@@ -763,8 +771,13 @@ footer h1 {
     }
 
     .footer-dicas-imagens {
-        width: 10%;
+        width: 15%;
     }
+
+    .footer-icons {
+        width: 1.5rem;
+    }
+
 }
 
 /* ---------------------- */
